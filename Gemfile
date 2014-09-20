@@ -10,7 +10,7 @@ gem 'spring', :group => :development
 gem 'pg'
 
 gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger', :group => :development
-gem 'pry-byebug'
+gem 'pry-byebug', group: :development
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
