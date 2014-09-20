@@ -23,7 +23,10 @@ default: &default
 
 development:
   <<: *default
+  host: localhost
   database: chewy-granola_development
+  username: chewy-granola
+  password: password
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +60,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  host: localhost
   database: chewy-granola_test
+  username: chewy-granola
+  password: password
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
