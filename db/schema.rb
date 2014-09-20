@@ -11,9 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140920163121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "books", force: true do |t|
+    t.string   "course_code"
+    t.string   "title"
+    t.string   "author"
+    t.string   "publisher"
+    t.datetime "published_date"
+    t.string   "seller_name"
+    t.string   "seller_email"
+    t.string   "seller_phone_number"
+    t.boolean  "verified",            default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "books", ["course_code"], name: "index_books_on_course_code", using: :btree
+  add_index "books", ["seller_email"], name: "index_books_on_seller_email", using: :btree
 
 end
