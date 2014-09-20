@@ -12,11 +12,15 @@ module Api
 				if book.save
 					render json: book
 				else
-					render json: {message: 'Error'}, status: 400
+					render json: {message: 'Error'}
 				end
 			end
 
 			def show
+				book = Book.find(params[:id])
+				render json: book
+				rescue ActiveRecord::RecordNotFound
+				render json: {message: 'RecordNotFound'}
 			end
 
 			def update
