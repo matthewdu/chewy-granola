@@ -6,5 +6,6 @@ class Book < ActiveRecord::Base
 	validates :author, presence: true
 	validates :publication_date, presence: true
 	validates :seller_email, presence: true
+	validates :price, presence: true
 
 end

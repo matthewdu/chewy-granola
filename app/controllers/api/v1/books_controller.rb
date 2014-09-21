@@ -5,8 +5,9 @@ module Api
 			def index
 				if params[:course_code]
 					book = Book.where(course_code: params[:course_code])
+				else
+					book = Book.all
 				end
-				# book = Book.all
 				render json: book
 			end
 
@@ -46,7 +47,7 @@ module Api
 
 			private
 			def book_params
-				params.require(:book).permit(:course_code, :title, :author, :publisher, :publication_date, :seller_name, :seller_email, :seller_phone_number)
+				params.require(:book).permit(:course_code, :title, :author, :publisher, :publication_date, :seller_name, :seller_email, :seller_phone_number, :price)
 			end
 
 		end
