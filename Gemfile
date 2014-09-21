@@ -11,6 +11,7 @@ gem 'pg'
 
 gem 'redis'
 gem 'rest_client'
+gem 'rack-cors'
 
 gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger', :group => :development
 gem 'pry-byebug', group: :development
