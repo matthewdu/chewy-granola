@@ -1,5 +1,8 @@
 class Book < ActiveRecord::Base
-	before_validation { self.course_code = self.course_code.delete " " }
+	before_validation do
+		self.course_code = self.course_code.delete " "
+		self.course_code = self.course_code.upcase
+	end
 
 	validates :course_code, presence: true, format: { with: /\w+\d{3}/ } 
 	validates :title, presence: true
