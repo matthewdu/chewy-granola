@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.2'
 
 gem 'rails', '4.1.4'
 
@@ -8,7 +9,14 @@ gem 'spring', :group => :development
 
 gem 'pg'
 
+gem 'redis'
+gem 'rest_client'
+gem 'rack-cors'
 
+gem 'jazz_hands', github: 'nixme/jazz_hands', branch: 'bring-your-own-debugger', :group => :development
+gem 'pry-byebug', group: :development
+
+gem 'rails_12factor', group: :production
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
